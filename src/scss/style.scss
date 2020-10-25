@@ -1,0 +1,96 @@
+@import 'reset';
+
+%padding-all {
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.body-container {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+
+    .left-bar {
+        @extend %padding-all;
+        width: 272px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            margin-bottom: 48px;
+        }
+
+        .button {
+            font-size: 16px;
+            color: #fff;
+            background: #5E81F4;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            width: 100%;
+            border-radius: 10px;
+            box-sizing: border-box;
+            outline-style: none;
+            border: none;
+        }
+
+        .nav {
+            margin-top: 48px;
+
+            ul {
+                list-style: none;
+
+                .active {
+                    a {
+                        color: #272829;
+
+                        .link-img svg rect, path  {
+                            stroke: #5E81F4;
+                        }
+                    }
+
+                }
+
+                li {
+                    margin: 0 0 48px 0;
+                    font-weight: 500;
+                    font-size: 16px;
+
+                    .link-img {
+                        margin-right: 25px;
+                    }
+
+                    a {
+                        display: flex;
+                        color: #8DA1B5;
+                        text-decoration: none;
+                    }
+
+                }
+                li:hover{
+                     
+                        a {
+                            color: #272829;
+    
+                            .link-img svg rect, path  {
+                                stroke: #5E81F4;
+                            }
+                        }
+                    
+                }
+                
+            }
+        }
+
+    }
+
+    .right-bar {
+        @extend %padding-all;
+        width: 384px;
+    }
+
+    .main {
+        @extend %padding-all;
+        flex-grow: 1;
+    }
+}
